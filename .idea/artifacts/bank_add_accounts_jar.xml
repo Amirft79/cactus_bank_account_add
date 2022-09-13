@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="bank_add_accounts:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/bank_add_accounts_jar</output-path>
+    <root id="archive" name="bank_add_accounts.jar">
+      <element id="module-output" name="bank_add_accounts" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/apache/commons/commons-csv/1.9.0/commons-csv-1.9.0.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
