@@ -1,10 +1,12 @@
 package ir.cactus;
 
+
 import ir.cactus.model.Accounts;
 import ir.cactus.model.Customers;
 import ir.cactus.utils.AccountType;
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVPrinter;
+import org.apache.log4j.Logger;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -16,12 +18,14 @@ import java.util.Calendar;
 import java.util.Date;
 
 
-public class FileGenerator {
+public  class  FileGenerator {
+
+
 
 
     private static ArrayList<Customers>customers;
     private static ArrayList<Accounts>accounts;
-
+    private  static Logger logger=Logger.getLogger(FileGenerator.class);
 
     private static final String CUSTOMER_FILE_NAME="Customer.csv";
     private static final String ACCOUNTS_FILE_NAME="Accounts.csv";
@@ -63,7 +67,7 @@ public class FileGenerator {
 
 
         }catch (IOException e){
-            System.out.println(e.getMessage());
+            logger.error(e);
         }
 
 
@@ -92,7 +96,7 @@ public class FileGenerator {
             }
 
         }catch (IOException e){
-            System.out.println(e.getMessage());
+            logger.error(e);
         }
     }
     /**
